@@ -144,6 +144,13 @@ export const db = {
     persist();
     return state.products[idx];
   },
+  deleteProduct: (id) => {
+    const initialLen = state.products.length;
+    state.products = state.products.filter(p => p.id !== id);
+    const deleted = state.products.length < initialLen;
+    if (deleted) persist();
+    return deleted;
+  },
   addProduct: (product) => {
     const newProd = {
       id: `prod-${Date.now()}`,
@@ -202,6 +209,58 @@ export const db = {
     state.orders.unshift(newOrder);
     persist();
     return newOrder;
+  },
+  updateOrderStatus: (orderId, newStatus) => {
+    const order = state.orders.find(o => o.orderId === orderId);
+    if (!order) return null;
+
+    order.status = newStatus;
+    const nowIso = new Date().toISOString();
+
+    const stageOrder = [
+      "Order Confirmed",
+      "Laser Fabric Cut",
+      "Custom 3D Print & Stitch",
+      "Quality Inspection",
+      "Dispatched with Courier",
+      "Delivered"
+    ];
+
+    let currentIdx = -1;
+    if (newStatus === "In Production") currentIdx = 1;
+    else if (newStatus === "Laser Fabric Cut") currentIdx = 1;
+    else if (newStatus === "Custom 3D Print & Stitch") currentIdx = 2;
+    else if (newStatus === "Quality Inspection") currentIdx = 3;
+    else if (newStatus === "Dispatched with Courier" || newStatus === "Shipped") currentIdx = 4;
+    else if (newStatus === "Delivered") currentIdx = 5;
+
+    if (currentIdx >= 0 && Array.isArray(order.timeline)) {
+      order.timeline = order.timeline.map((step, idx) => {
+        if (idx <= currentIdx) {
+          return {
+            ...step,
+            done: true,
+            time: step.time || nowIso
+          };
+        } else {
+          return {
+            ...step,
+            done: false,
+            time: null
+          };
+        }
+      });
+    }
+
+    persist();
+    return order;
+  },
+  deleteOrder: (orderId) => {
+    const initialLen = state.orders.length;
+    state.orders = state.orders.filter(o => o.orderId !== orderId);
+    const deleted = state.orders.length < initialLen;
+    if (deleted) persist();
+    return deleted;
   },
 
   // Metrics for Admin Dashboard

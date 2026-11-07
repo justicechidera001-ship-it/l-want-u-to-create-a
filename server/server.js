@@ -78,6 +78,14 @@ app.post('/api/products', (req, res) => {
   res.status(201).json({ success: true, product: created });
 });
 
+app.delete('/api/products/:id', (req, res) => {
+  const ok = db.deleteProduct(req.params.id);
+  if (!ok) {
+    return res.status(404).json({ success: false, message: 'Product not found' });
+  }
+  res.json({ success: true, message: 'Product deleted' });
+});
+
 // 2. Graphic Presets
 app.get('/api/presets', (req, res) => {
   res.json({ success: true, presets: db.getPresets() });
@@ -176,6 +184,29 @@ app.post('/api/orders', (req, res) => {
   });
 
   res.status(201).json({ success: true, order: createdOrder });
+});
+
+const handleStatusUpdate = (req, res) => {
+  const { status } = req.body;
+  if (!status) {
+    return res.status(400).json({ success: false, message: 'Status is required' });
+  }
+  const updated = db.updateOrderStatus(req.params.orderId, status);
+  if (!updated) {
+    return res.status(404).json({ success: false, message: 'Order not found' });
+  }
+  res.json({ success: true, order: updated });
+};
+
+app.patch('/api/orders/:orderId/status', handleStatusUpdate);
+app.patch('/api/orders/:orderId', handleStatusUpdate);
+
+app.delete('/api/orders/:orderId', (req, res) => {
+  const ok = db.deleteOrder(req.params.orderId);
+  if (!ok) {
+    return res.status(404).json({ success: false, message: 'Order not found' });
+  }
+  res.json({ success: true, message: 'Order deleted successfully' });
 });
 
 // 6. Admin Metrics

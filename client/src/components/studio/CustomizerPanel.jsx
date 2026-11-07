@@ -9,9 +9,11 @@ import {
   Ruler,
   Check,
   RotateCw,
+  RotateCcw,
   Sliders,
   DollarSign,
-  Info
+  Info,
+  Ban
 } from 'lucide-react';
 
 export default function CustomizerPanel({
@@ -172,15 +174,35 @@ export default function CustomizerPanel({
         <p className="text-xs text-slate-400 mt-1 line-clamp-1">{product.tagline}</p>
 
         {/* Live Price Tag */}
-        <div className="mt-3 flex items-baseline space-x-2">
-          <span className="text-2xl font-display font-extrabold text-white">${totalPrice}</span>
-          {fabricExtra > 0 && (
-            <span className="text-xs font-mono text-brand-cyan">
-              (+${fabricExtra} {currentFabric.name?.split(' ')[0]})
-            </span>
-          )}
-          {decalExtra > 0 && (
-            <span className="text-xs font-mono text-brand-gold">(+$15 Custom Decal)</span>
+        <div className="mt-3 flex items-center justify-between">
+          <div className="flex items-baseline space-x-2">
+            <span className="text-2xl font-display font-extrabold text-white">${totalPrice}</span>
+            {fabricExtra > 0 && (
+              <span className="text-xs font-mono text-brand-cyan">
+                (+${fabricExtra} {currentFabric.name?.split(' ')[0]})
+              </span>
+            )}
+            {decalExtra > 0 && (
+              <span className="text-xs font-mono text-brand-gold">(+$15 Custom Decal)</span>
+            )}
+          </div>
+          {product.defaultConfig && (
+            <button
+              onClick={() => {
+                onChangeConfig({
+                  ...product.defaultConfig,
+                  decal: {
+                    ...product.defaultConfig.decal,
+                    svgContent: presets[0]?.svg || null
+                  }
+                });
+              }}
+              title="Reset Garment to Factory Defaults"
+              className="text-[11px] font-mono text-slate-400 hover:text-brand-neon flex items-center space-x-1 px-2 py-1 rounded-lg bg-dark-900 border border-slate-800 hover:border-slate-700 transition"
+            >
+              <RotateCcw className="w-3 h-3" />
+              <span>Reset</span>
+            </button>
           )}
         </div>
       </div>
@@ -467,6 +489,34 @@ export default function CustomizerPanel({
                 Curated Graphic Prints Library
               </label>
               <div className="grid grid-cols-2 gap-2.5">
+                {/* Option to clear decal */}
+                <div
+                  onClick={() => {
+                    onChangeConfig({
+                      ...customConfig,
+                      decal: {
+                        ...customConfig.decal,
+                        id: 'none',
+                        svgContent: null,
+                        customImage: null
+                      }
+                    });
+                  }}
+                  className={`p-2.5 rounded-xl border cursor-pointer transition flex flex-col items-center justify-center bg-dark-950 ${
+                    customConfig.decal?.id === 'none' || (!customConfig.decal?.svgContent && !customConfig.decal?.customImage)
+                      ? 'border-brand-neon ring-2 ring-brand-neon/30 bg-slate-800/60'
+                      : 'border-slate-800 hover:border-slate-700'
+                  }`}
+                >
+                  <div className="w-16 h-16 flex items-center justify-center mb-1.5 text-slate-500">
+                    <Ban className="w-8 h-8 opacity-60" />
+                  </div>
+                  <span className="text-[11px] font-bold text-slate-200 text-center leading-tight">
+                    Clean Plain
+                  </span>
+                  <span className="text-[9px] font-mono text-slate-500 uppercase">Minimalist</span>
+                </div>
+
                 {presets.map((preset) => {
                   const isSelected = customConfig.decal?.id === preset.id;
                   return (

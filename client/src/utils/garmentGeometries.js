@@ -392,6 +392,13 @@ export function createJacketMesh(materials) {
   frontDecalMesh.name = 'decal_front';
   group.add(frontDecalMesh);
 
+  const leftChestGeo = new THREE.PlaneGeometry(0.32, 0.32);
+  const leftChestMesh = new THREE.Mesh(leftChestGeo, materials.decal);
+  leftChestMesh.position.set(-0.42, 0.58, 0.53);
+  leftChestMesh.rotation.y = 0.22;
+  leftChestMesh.name = 'decal_chest_left';
+  group.add(leftChestMesh);
+
   return group;
 }
 
@@ -469,13 +476,27 @@ export function createBlazerMesh(materials) {
   rightSleeve.rotation.z = -0.35;
   group.add(rightSleeve);
 
-  // Decal badge on left chest pocket area
+  // Decal planes
   const chestDecalGeo = new THREE.PlaneGeometry(0.35, 0.35);
   const chestDecalMesh = new THREE.Mesh(chestDecalGeo, materials.decal);
   chestDecalMesh.position.set(-0.48, 0.45, 0.48);
   chestDecalMesh.rotation.y = 0.3;
   chestDecalMesh.name = 'decal_chest_left';
   group.add(chestDecalMesh);
+
+  const frontDecalGeo = new THREE.PlaneGeometry(0.55, 0.55);
+  const frontDecalMesh = new THREE.Mesh(frontDecalGeo, materials.decal);
+  frontDecalMesh.position.set(0.28, 0.25, 0.5);
+  frontDecalMesh.rotation.y = -0.18;
+  frontDecalMesh.name = 'decal_front';
+  group.add(frontDecalMesh);
+
+  const backDecalGeo = new THREE.PlaneGeometry(0.85, 0.85);
+  const backDecalMesh = new THREE.Mesh(backDecalGeo, materials.decal);
+  backDecalMesh.position.set(0, 0.3, -0.52);
+  backDecalMesh.rotation.y = Math.PI;
+  backDecalMesh.name = 'decal_back';
+  group.add(backDecalMesh);
 
   return group;
 }
@@ -542,13 +563,29 @@ export function createPantsMesh(materials) {
   rightAnkle.position.set(0.48, -1.35, 0);
   group.add(rightAnkle);
 
-  // Decal badge on left cargo pocket
-  const pocketDecalGeo = new THREE.PlaneGeometry(0.3, 0.3);
+  // Decal planes
+  // 1. Left cargo pocket badge
+  const pocketDecalGeo = new THREE.PlaneGeometry(0.32, 0.32);
   const pocketDecalMesh = new THREE.Mesh(pocketDecalGeo, materials.decal);
   pocketDecalMesh.position.set(-0.86, -0.2, 0);
   pocketDecalMesh.rotation.y = -Math.PI / 2;
   pocketDecalMesh.name = 'decal_chest_left';
   group.add(pocketDecalMesh);
+
+  // 2. Front left thigh patch
+  const frontPantsDecalGeo = new THREE.PlaneGeometry(0.4, 0.4);
+  const frontPantsDecalMesh = new THREE.Mesh(frontPantsDecalGeo, materials.decal);
+  frontPantsDecalMesh.position.set(-0.42, -0.3, 0.36);
+  frontPantsDecalMesh.name = 'decal_front';
+  group.add(frontPantsDecalMesh);
+
+  // 3. Back right hip pocket patch
+  const backPantsDecalGeo = new THREE.PlaneGeometry(0.35, 0.35);
+  const backPantsDecalMesh = new THREE.Mesh(backPantsDecalGeo, materials.decal);
+  backPantsDecalMesh.position.set(0.42, 0.4, -0.36);
+  backPantsDecalMesh.rotation.y = Math.PI;
+  backPantsDecalMesh.name = 'decal_back';
+  group.add(backPantsDecalMesh);
 
   return group;
 }
@@ -607,6 +644,23 @@ export function createCapMesh(materials) {
   patchMesh.rotation.x = -0.3;
   patchMesh.name = 'decal_front';
   group.add(patchMesh);
+
+  // 6. Rear Arch Embroidery Zone (Back)
+  const backCapGeo = new THREE.PlaneGeometry(0.48, 0.25);
+  const backCapMesh = new THREE.Mesh(backCapGeo, materials.decal);
+  backCapMesh.position.set(0, 0.35, -0.74);
+  backCapMesh.rotation.y = Math.PI;
+  backCapMesh.rotation.x = 0.35;
+  backCapMesh.name = 'decal_back';
+  group.add(backCapMesh);
+
+  // 7. Left Temple Side Embroidery (Crest / Pocket)
+  const sideCapGeo = new THREE.PlaneGeometry(0.35, 0.3);
+  const sideCapMesh = new THREE.Mesh(sideCapGeo, materials.decal);
+  sideCapMesh.position.set(-0.75, 0.35, 0.1);
+  sideCapMesh.rotation.y = -Math.PI / 2;
+  sideCapMesh.name = 'decal_chest_left';
+  group.add(sideCapMesh);
 
   return group;
 }

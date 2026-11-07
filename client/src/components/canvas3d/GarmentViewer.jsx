@@ -606,7 +606,7 @@ export default function GarmentViewer({
           <span className="text-[11px] font-mono uppercase text-slate-400 mr-2 flex items-center">
             <Compass className="w-3.5 h-3.5 mr-1 text-brand-cyan" /> View:
           </span>
-          {['front', 'back', 'left', 'closeup'].map((view) => (
+          {['front', 'back', 'left', 'right', 'closeup'].map((view) => (
             <button
               key={view}
               onClick={() => setCameraPreset(view)}

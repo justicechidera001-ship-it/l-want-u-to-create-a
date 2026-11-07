@@ -1,11 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Package, CheckCircle2, Clock, Truck, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Search, Package, CheckCircle2, Clock, Truck, ShieldCheck, ArrowRight, RefreshCw, Sparkles, MapPin } from 'lucide-react';
 
 export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudio }) {
   const [searchCode, setSearchCode] = useState(initialOrderId);
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [allOrdersList, setAllOrdersList] = useState([]);
+
+  // Fetch recent order codes from server
+  useEffect(() => {
+    fetch('/api/orders')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.orders) {
+          setAllOrdersList(data.orders.map(o => o.orderId));
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const fetchOrder = async (id) => {
     if (!id) return;
@@ -17,7 +30,7 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
       if (data.success && data.order) {
         setOrder(data.order);
       } else {
-        setError('Order not found. Check code (e.g. TC-94821).');
+        setError(`Order "${id}" not found. Try TC-94821 or place a new order.`);
         setOrder(null);
       }
     } catch (err) {
@@ -30,6 +43,7 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
 
   useEffect(() => {
     if (initialOrderId) {
+      setSearchCode(initialOrderId);
       fetchOrder(initialOrderId);
     }
   }, [initialOrderId]);
@@ -37,6 +51,11 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
   const handleSearch = (e) => {
     e.preventDefault();
     fetchOrder(searchCode);
+  };
+
+  const handleQuickSelect = (id) => {
+    setSearchCode(id);
+    fetchOrder(id);
   };
 
   return (
@@ -49,7 +68,7 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
         </div>
         <h1 className="text-3xl font-display font-extrabold text-white">Live Garment Dispatch Status</h1>
         <p className="text-xs sm:text-sm text-slate-400">
-          Track the digital cutting, 3D screen printing, and tailored assembly of your bespoke garments.
+          Track digital fabric cutting, high-density 3D screen printing, and tailored assembly of your bespoke pieces.
         </p>
 
         {/* Search Input */}
@@ -71,18 +90,40 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
             Track Order
           </button>
         </form>
-        {error && <p className="text-xs font-mono text-rose-400">{error}</p>}
+
+        {/* Quick Order Chips */}
+        {allOrdersList.length > 0 && (
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-2 text-xs font-mono">
+            <span className="text-slate-500">Quick track:</span>
+            {allOrdersList.slice(0, 4).map((id) => (
+              <button
+                key={id}
+                onClick={() => handleQuickSelect(id)}
+                className={`px-2.5 py-1 rounded-lg border text-[11px] transition ${
+                  searchCode === id
+                    ? 'border-brand-neon text-brand-neon bg-brand-neon/10 font-bold'
+                    : 'border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 bg-dark-900'
+                }`}
+              >
+                {id}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {error && <p className="text-xs font-mono text-rose-400 pt-1">{error}</p>}
       </div>
 
       {loading && (
-        <div className="text-center py-12 text-slate-400 font-mono text-xs animate-pulse">
-          Retrieving garment production log...
+        <div className="text-center py-12 text-slate-400 font-mono text-xs flex items-center justify-center space-x-2">
+          <RefreshCw className="w-4 h-4 animate-spin text-brand-neon" />
+          <span>Retrieving garment production log...</span>
         </div>
       )}
 
       {/* Order Display */}
       {order && !loading && (
-        <div className="space-y-6">
+        <div className="space-y-6 animate-fade-in">
           {/* Status Progress Timeline */}
           <div className="p-6 sm:p-8 rounded-3xl bg-dark-900 border border-slate-800 shadow-xl space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-slate-800 gap-4">
@@ -94,6 +135,13 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
                 <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40">
                   {order.status}
                 </span>
+                <button
+                  onClick={() => fetchOrder(order.orderId)}
+                  className="p-1.5 rounded-lg bg-dark-950 border border-slate-800 text-slate-400 hover:text-brand-neon hover:border-brand-neon/40 transition"
+                  title="Refresh Live Status"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" />
+                </button>
                 <span className="text-xs font-mono text-slate-400">
                   Placed: {new Date(order.createdAt).toLocaleDateString()}
                 </span>
@@ -108,7 +156,7 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
                     <div
                       className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs transition shadow-lg ${
                         stepItem.done
-                          ? 'bg-brand-neon text-dark-950 shadow-glow-neon'
+                          ? 'bg-brand-neon text-dark-950 shadow-glow-neon ring-4 ring-brand-neon/20'
                           : 'bg-dark-950 text-slate-500 border border-slate-800'
                       }`}
                     >
@@ -118,10 +166,12 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
                       <h4 className={`text-xs font-bold leading-tight ${stepItem.done ? 'text-white' : 'text-slate-500'}`}>
                         {stepItem.status}
                       </h4>
-                      {stepItem.time && (
+                      {stepItem.time ? (
                         <span className="text-[10px] font-mono text-brand-cyan block">
                           {new Date(stepItem.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                         </span>
+                      ) : (
+                        <span className="text-[10px] font-mono text-slate-600 block">Pending</span>
                       )}
                     </div>
                   </div>
@@ -143,25 +193,36 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
                 {order.items?.map((item, idx) => (
                   <div key={idx} className="p-4 rounded-2xl bg-dark-950 border border-slate-800 flex items-center justify-between">
                     <div>
-                      <h5 className="text-sm font-bold text-white">{item.name}</h5>
+                      <h5 className="text-sm font-bold text-white font-display">{item.name}</h5>
                       <div className="flex items-center space-x-2 text-xs text-slate-400 font-mono mt-1">
-                        <span>Size: {item.size}</span>
+                        <span>Size: <strong className="text-white">{item.size}</strong></span>
                         <span>•</span>
-                        <span className="text-brand-cyan">{item.fabricName || 'Custom'}</span>
+                        <span className="text-brand-cyan">{item.fabricName || 'French Terry'}</span>
+                        {item.decal?.position && (
+                          <>
+                            <span>•</span>
+                            <span className="text-brand-gold capitalize">Zone: {item.decal.position}</span>
+                          </>
+                        )}
                       </div>
                       <div className="flex items-center space-x-2 mt-2">
+                        <span className="text-[11px] font-mono text-slate-500">Palette:</span>
                         <span
-                          className="w-3.5 h-3.5 rounded-full border border-slate-700"
+                          className="w-3.5 h-3.5 rounded-full border border-slate-700 shadow-sm"
                           style={{ backgroundColor: item.primaryColor }}
+                          title={`Primary: ${item.primaryColor}`}
                         />
-                        <span
-                          className="w-3.5 h-3.5 rounded-full border border-slate-700"
-                          style={{ backgroundColor: item.accentColor }}
-                        />
+                        {item.accentColor && (
+                          <span
+                            className="w-3.5 h-3.5 rounded-full border border-slate-700 shadow-sm"
+                            style={{ backgroundColor: item.accentColor }}
+                            title={`Accent: ${item.accentColor}`}
+                          />
+                        )}
                       </div>
                     </div>
                     <div className="text-right">
-                      <span className="text-sm font-display font-bold text-white">${item.price}</span>
+                      <span className="text-sm font-display font-bold text-brand-neon">${item.price * (item.quantity || 1)}</span>
                       <span className="text-xs text-slate-500 block font-mono">Qty: {item.quantity || 1}</span>
                     </div>
                   </div>
@@ -169,12 +230,22 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
               </div>
             </div>
 
-            {/* Shipping Info */}
+            {/* Shipping Info & Courier */}
             <div className="p-6 rounded-3xl bg-dark-900 border border-slate-800 space-y-4">
               <h4 className="text-sm font-bold text-white font-display flex items-center space-x-2">
                 <Truck className="w-4 h-4 text-brand-cyan" />
-                <span>Shipping Address</span>
+                <span>Delivery Logistics</span>
               </h4>
+
+              <div className="p-3 rounded-xl bg-dark-950 border border-slate-800/80 space-y-1">
+                <div className="text-[10px] font-mono text-brand-neon uppercase tracking-wider font-bold">
+                  Express Courier
+                </div>
+                <div className="text-xs text-white font-bold">DHL Carbon-Neutral Express</div>
+                <div className="text-[11px] font-mono text-slate-400">
+                  Estimated Arrival: 3-5 Business Days
+                </div>
+              </div>
 
               <div className="space-y-1 text-xs text-slate-300 font-mono">
                 <p className="font-bold text-white">{order.customer?.fullName}</p>
@@ -189,6 +260,12 @@ export default function OrderTracking({ initialOrderId = 'TC-94821', onOpenStudi
                   <span>Subtotal</span>
                   <span className="text-white">${order.subtotal}</span>
                 </div>
+                {order.discount > 0 && (
+                  <div className="flex justify-between text-brand-neon">
+                    <span>Promo Discount</span>
+                    <span>-${order.discount}</span>
+                  </div>
+                )}
                 <div className="flex justify-between text-slate-400">
                   <span>Shipping</span>
                   <span className="text-white">{order.shipping === 0 ? 'FREE' : `$${order.shipping}`}</span>

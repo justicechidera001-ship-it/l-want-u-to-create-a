@@ -987,7 +987,7 @@
       "shipping": 0,
       "discount": 0,
       "total": 128,
-      "status": "In Production",
+      "status": "Dispatched with Courier",
       "timeline": [
         {
           "status": "Order Confirmed",
@@ -1006,13 +1006,13 @@
         },
         {
           "status": "Quality Inspection",
-          "time": null,
-          "done": false
+          "time": "2026-11-07T18:17:32.967Z",
+          "done": true
         },
         {
           "status": "Dispatched with Courier",
-          "time": null,
-          "done": false
+          "time": "2026-11-07T18:17:32.967Z",
+          "done": true
         }
       ],
       "paymentMethod": "Credit Card (ending 4242)",
