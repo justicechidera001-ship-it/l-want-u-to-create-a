@@ -1,0 +1,1022 @@
+{
+  "products": [
+    {
+      "id": "prod-hoodie-01",
+      "name": "Aetheric Cyber-Hoodie",
+      "category": "Hoodies",
+      "tagline": "480 GSM French Terry with oversized structured drape",
+      "price": 128,
+      "type": "hoodie",
+      "isCustomizable": true,
+      "rating": 4.9,
+      "reviewsCount": 142,
+      "badge": "Bestseller",
+      "colors": [
+        {
+          "name": "Onyx Black",
+          "hex": "#14171d",
+          "isDark": true
+        },
+        {
+          "name": "Bone White",
+          "hex": "#f0ede6",
+          "isDark": false
+        },
+        {
+          "name": "Cyber Neon",
+          "hex": "#00f5a0",
+          "isDark": false
+        },
+        {
+          "name": "Electric Cyan",
+          "hex": "#00d9f5",
+          "isDark": false
+        },
+        {
+          "name": "Crimson Acid",
+          "hex": "#e63946",
+          "isDark": true
+        },
+        {
+          "name": "Forest Sage",
+          "hex": "#2d4a3e",
+          "isDark": true
+        },
+        {
+          "name": "Cosmic Violet",
+          "hex": "#5b21b6",
+          "isDark": true
+        },
+        {
+          "name": "Sand Taupe",
+          "hex": "#b5a28a",
+          "isDark": false
+        }
+      ],
+      "fabrics": [
+        {
+          "id": "terry",
+          "name": "Heavyweight French Terry",
+          "gsm": "480 GSM",
+          "roughness": 0.85,
+          "metalness": 0.05,
+          "bumpScale": 0.08,
+          "priceExtra": 0,
+          "desc": "Ultra-dense knit with looped reverse interior."
+        },
+        {
+          "id": "cotton",
+          "name": "Brushed Fleece Cotton",
+          "gsm": "420 GSM",
+          "roughness": 0.9,
+          "metalness": 0.02,
+          "bumpScale": 0.05,
+          "priceExtra": 10,
+          "desc": "Soft peach-finish exterior with plush thermal fleece inside."
+        },
+        {
+          "id": "ripstop",
+          "name": "Techwear Water-Resistant",
+          "gsm": "350 GSM",
+          "roughness": 0.4,
+          "metalness": 0.25,
+          "bumpScale": 0.04,
+          "priceExtra": 25,
+          "desc": "Crosshatch reinforced weave with hydrophobic matte coating."
+        },
+        {
+          "id": "velvet",
+          "name": "Luxe Crushed Velour",
+          "gsm": "380 GSM",
+          "roughness": 0.35,
+          "metalness": 0.15,
+          "bumpScale": 0.12,
+          "priceExtra": 35,
+          "desc": "Dynamic light-catching pile with high-fashion sheen."
+        }
+      ],
+      "defaultConfig": {
+        "primaryColor": "#14171d",
+        "accentColor": "#00f5a0",
+        "cordsColor": "#ffffff",
+        "fabricId": "terry",
+        "size": "L",
+        "decal": {
+          "id": "cyber-kanji",
+          "position": "front",
+          "scale": 0.65,
+          "rotation": 0,
+          "opacity": 0.95
+        }
+      },
+      "hotspots": [
+        {
+          "id": "hood-structure",
+          "label": "Double-Lined Architectural Hood",
+          "desc": "Constructed with dual-layer 480 GSM paneling so the hood stays upright and sculptural when down.",
+          "x": 0,
+          "y": 1.85,
+          "z": 0.3
+        },
+        {
+          "id": "pocket-reinforce",
+          "label": "Hidden Internal Stash Pocket",
+          "desc": "Kangaroo pocket features reinforced bar-tacks and a concealed zip sleeve for AirPods or keys.",
+          "x": 0,
+          "y": -0.35,
+          "z": 0.6
+        },
+        {
+          "id": "cuff-elastane",
+          "label": "Elongated 2x2 Ribbed Cuffs",
+          "desc": "Blended with 4% Lycra elastane to prevent stretching over time while hugging wrists comfortably.",
+          "x": -1.45,
+          "y": -0.4,
+          "z": 0.05
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "description": "The crown jewel of modern technical streetwear. Cut in an exaggerated drop-shoulder silhouette with deep armholes, an architectural dual-layer hood, and precision-milled metal cord aglets.",
+      "details": [
+        "Heavyweight 480 GSM 100% organic cotton French terry",
+        "Seamless kangaroo pouch with internal zip compartment",
+        "Signature drop shoulder tailoring for relaxed boxy drape",
+        "Enzyme treated for soft vintage hand-feel and zero shrinkage",
+        "Handcrafted in Portugal in ethical small batches"
+      ]
+    },
+    {
+      "id": "prod-tee-02",
+      "name": "Solstice Heavy Drop-Shoulder Tee",
+      "category": "T-Shirts",
+      "tagline": "280 GSM Compact Combed Cotton with boxy drape",
+      "price": 64,
+      "type": "tshirt",
+      "isCustomizable": true,
+      "rating": 4.8,
+      "reviewsCount": 210,
+      "badge": "Trending",
+      "colors": [
+        {
+          "name": "Onyx Black",
+          "hex": "#14171d",
+          "isDark": true
+        },
+        {
+          "name": "Vintage Chalk",
+          "hex": "#eceae5",
+          "isDark": false
+        },
+        {
+          "name": "Electric Cyan",
+          "hex": "#00d9f5",
+          "isDark": false
+        },
+        {
+          "name": "Cyber Neon",
+          "hex": "#00f5a0",
+          "isDark": false
+        },
+        {
+          "name": "Solar Amber",
+          "hex": "#f59e0b",
+          "isDark": false
+        },
+        {
+          "name": "Washed Olive",
+          "hex": "#3f4738",
+          "isDark": true
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#172033",
+          "isDark": true
+        }
+      ],
+      "fabrics": [
+        {
+          "id": "cotton",
+          "name": "Compact Combed Cotton",
+          "gsm": "280 GSM",
+          "roughness": 0.8,
+          "metalness": 0.02,
+          "bumpScale": 0.04,
+          "priceExtra": 0,
+          "desc": "High-density spun cotton with zero pilling."
+        },
+        {
+          "id": "silk",
+          "name": "Silk-Cotton Mercerized",
+          "gsm": "250 GSM",
+          "roughness": 0.35,
+          "metalness": 0.2,
+          "bumpScale": 0.02,
+          "priceExtra": 30,
+          "desc": "Lustrous fluid drape with subtle cooling effect against skin."
+        },
+        {
+          "id": "raw-linen",
+          "name": "Linen Cotton Slub",
+          "gsm": "260 GSM",
+          "roughness": 0.95,
+          "metalness": 0.01,
+          "bumpScale": 0.1,
+          "priceExtra": 15,
+          "desc": "Textured organic slub with breathable open weave."
+        }
+      ],
+      "defaultConfig": {
+        "primaryColor": "#14171d",
+        "accentColor": "#00d9f5",
+        "cordsColor": "#ffffff",
+        "fabricId": "cotton",
+        "size": "M",
+        "decal": {
+          "id": "abstract-aura",
+          "position": "front",
+          "scale": 0.7,
+          "rotation": 0,
+          "opacity": 1
+        }
+      },
+      "hotspots": [
+        {
+          "id": "tee-rib-collar",
+          "label": "1.25\" Chunky Bound Collar",
+          "desc": "Thick bound crewneck collar prevents bacon-neck after dozens of high-temperature washes.",
+          "x": 0,
+          "y": 1.35,
+          "z": 0.35
+        },
+        {
+          "id": "tee-sleeve-drop",
+          "label": "Extended Elbow-Length Sleeves",
+          "desc": "Clean drop shoulder that extends to the upper elbow for modern high-fashion proportions.",
+          "x": -1.3,
+          "y": 0.3,
+          "z": 0.05
+        },
+        {
+          "id": "tee-twin-needle",
+          "label": "Twin Needle Split Hem",
+          "desc": "Reinforced bottom hem with subtle side slits for smooth stacking over cargo trousers.",
+          "x": 0,
+          "y": -1.2,
+          "z": 0.4
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "description": "The ultimate heavyweight everyday tee. Knitted from ultra-dense 280 GSM combed cotton that creates a crisp silhouette that doesn't cling to the body. Features a thick bound crewneck collar and dropped shoulders.",
+      "details": [
+        "280 GSM single jersey compact combed cotton",
+        "Reinforced 1.25\" chunky rib collar with twin stitching",
+        "Tubular body knit without side seams for max comfort",
+        "Pre-shrunk through garment dye process",
+        "Silk-touch custom screenprint receptive surface"
+      ]
+    },
+    {
+      "id": "prod-jacket-03",
+      "name": "Neo-Tokyo Techwear Windbreaker",
+      "category": "Jackets",
+      "tagline": "3-Layer DWR ripstop shell with waterproof YKK zips",
+      "price": 185,
+      "type": "jacket",
+      "isCustomizable": true,
+      "rating": 5,
+      "reviewsCount": 98,
+      "badge": "Exclusive",
+      "colors": [
+        {
+          "name": "Stealth Black",
+          "hex": "#0c0f14",
+          "isDark": true
+        },
+        {
+          "name": "Cyber Grey",
+          "hex": "#2b303c",
+          "isDark": true
+        },
+        {
+          "name": "Glacier White",
+          "hex": "#e2e8f0",
+          "isDark": false
+        },
+        {
+          "name": "Toxic Cyan",
+          "hex": "#00d9f5",
+          "isDark": false
+        },
+        {
+          "name": "Signal Orange",
+          "hex": "#f97316",
+          "isDark": false
+        },
+        {
+          "name": "Deep Navy",
+          "hex": "#111827",
+          "isDark": true
+        }
+      ],
+      "fabrics": [
+        {
+          "id": "ripstop",
+          "name": "3-Layer DWR Hydrophobic Ripstop",
+          "gsm": "320 GSM",
+          "roughness": 0.35,
+          "metalness": 0.28,
+          "bumpScale": 0.06,
+          "priceExtra": 0,
+          "desc": "Diamond grid woven nylon with 20,000mm hydrostatic head."
+        },
+        {
+          "id": "leather",
+          "name": "Matte Technical Vegan Leather",
+          "gsm": "420 GSM",
+          "roughness": 0.5,
+          "metalness": 0.1,
+          "bumpScale": 0.08,
+          "priceExtra": 45,
+          "desc": "Supple water-resistant synthetic grain leather."
+        },
+        {
+          "id": "holographic",
+          "name": "Iridescent Prism Foil",
+          "gsm": "300 GSM",
+          "roughness": 0.2,
+          "metalness": 0.85,
+          "bumpScale": 0.03,
+          "priceExtra": 60,
+          "desc": "Chameleon optical coating that shifts colors under lighting."
+        }
+      ],
+      "defaultConfig": {
+        "primaryColor": "#0c0f14",
+        "accentColor": "#00f5a0",
+        "cordsColor": "#00d9f5",
+        "fabricId": "ripstop",
+        "size": "L",
+        "decal": {
+          "id": "bauhaus-grid",
+          "position": "back",
+          "scale": 0.75,
+          "rotation": 0,
+          "opacity": 0.95
+        }
+      },
+      "hotspots": [
+        {
+          "id": "ykk-aquaguard",
+          "label": "YKK AquaGuard Waterproof Zipper",
+          "desc": "Polyurethane laminated zipper tape provides impenetrable seal against heavy precipitation.",
+          "x": 0,
+          "y": 0.2,
+          "z": 0.58
+        },
+        {
+          "id": "storm-funnel",
+          "label": "Storm Funnel Collar",
+          "desc": "Extra-high windbreak neck with chin guard and dual magnetic snap closure.",
+          "x": 0,
+          "y": 1.45,
+          "z": 0.35
+        },
+        {
+          "id": "arm-reflective",
+          "label": "3M Scotchlite Reflective Bands",
+          "desc": "Engineered visibility strips along outer forearms visible from 300 meters at night.",
+          "x": -1.35,
+          "y": -0.1,
+          "z": 0.1
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "description": "Designed for nocturnal exploration and unpredictable weather. Features a technical funnel collar, fully taped seams, multi-tier utility pockets, and 3M Scotchlite high-reflectivity accents.",
+      "details": [
+        "Triple-layer hydrophobic ripstop with bonded breathable membrane",
+        "Full waterproof taped seams throughout all critical zones",
+        "Two-way YKK AquaGuard zipper with custom anodized pullers",
+        "Dual chest storm pockets and interior RFID-shielded card slot",
+        "Ergonomic articulated sleeves with adjustable velcro tabs"
+      ]
+    },
+    {
+      "id": "prod-blazer-04",
+      "name": "Apex Structured Tailored Blazer",
+      "category": "Blazers",
+      "tagline": "Deconstructed luxury tailoring with silk satin accents",
+      "price": 240,
+      "type": "blazer",
+      "isCustomizable": true,
+      "rating": 4.9,
+      "reviewsCount": 75,
+      "badge": "Limited Run",
+      "colors": [
+        {
+          "name": "Midnight Charcoal",
+          "hex": "#13171e",
+          "isDark": true
+        },
+        {
+          "name": "Smoky Stone",
+          "hex": "#4b5563",
+          "isDark": true
+        },
+        {
+          "name": "Cream Ivory",
+          "hex": "#f3f0e6",
+          "isDark": false
+        },
+        {
+          "name": "Emerald Forest",
+          "hex": "#14362a",
+          "isDark": true
+        },
+        {
+          "name": "Crimson Velvet",
+          "hex": "#4c0519",
+          "isDark": true
+        }
+      ],
+      "fabrics": [
+        {
+          "id": "wool",
+          "name": "Italian Virgin Wool Blend",
+          "gsm": "360 GSM",
+          "roughness": 0.75,
+          "metalness": 0.05,
+          "bumpScale": 0.05,
+          "priceExtra": 0,
+          "desc": "Premium fine twill woven in Biella, Italy with natural stretch."
+        },
+        {
+          "id": "velvet",
+          "name": "Imperial Cotton Velvet",
+          "gsm": "420 GSM",
+          "roughness": 0.35,
+          "metalness": 0.1,
+          "bumpScale": 0.15,
+          "priceExtra": 55,
+          "desc": "Sumptuous rich deep pile with dramatic light falloff."
+        },
+        {
+          "id": "silk",
+          "name": "Duchess Silk-Satin",
+          "gsm": "300 GSM",
+          "roughness": 0.25,
+          "metalness": 0.4,
+          "bumpScale": 0.02,
+          "priceExtra": 80,
+          "desc": "High-specular lustrous finish tailored for evening events."
+        }
+      ],
+      "defaultConfig": {
+        "primaryColor": "#13171e",
+        "accentColor": "#c084fc",
+        "cordsColor": "#f59e0b",
+        "fabricId": "wool",
+        "size": "40R",
+        "decal": {
+          "id": "minimal-monogram",
+          "position": "chest-left",
+          "scale": 0.4,
+          "rotation": 0,
+          "opacity": 0.9
+        }
+      },
+      "hotspots": [
+        {
+          "id": "sharp-notch",
+          "label": "Precision Hand-Rolled Lapel",
+          "desc": "Traditional canvas chest piece creates a natural sculptural roll that molds to the chest.",
+          "x": 0.35,
+          "y": 0.85,
+          "z": 0.45
+        },
+        {
+          "id": "horn-buttons",
+          "label": "Carved Matte Horn Buttons",
+          "desc": "Genuine water buffalo horn buttons cross-stitched with silk waxed thread.",
+          "x": 0,
+          "y": -0.15,
+          "z": 0.52
+        },
+        {
+          "id": "lining-contrast",
+          "label": "Customizable Silk Cupro Lining",
+          "desc": "Anti-static breathable interior sleeve and body lining in accent color.",
+          "x": -0.35,
+          "y": 0.2,
+          "z": 0.42
+        }
+      ],
+      "sizes": [
+        "38R",
+        "40R",
+        "42R",
+        "44R",
+        "46R"
+      ],
+      "description": "A harmonious marriage of traditional Savile Row tailoring and modern avant-garde street silhouette. Deconstructed soft shoulders create an effortlessly sharp posture.",
+      "details": [
+        "Virgin wool and silk blend with crease-resistant recovery",
+        "Floating horsehair canvas chest piece for natural drape",
+        "Hand-set horn buttons with functional surgeon cuffs",
+        "Twin back vents for ease of movement and comfort",
+        "Full internal pockets including passport and pen holder"
+      ]
+    },
+    {
+      "id": "prod-pants-05",
+      "name": "Vanguard Tactical Cargo Trousers",
+      "category": "Pants",
+      "tagline": "Modular 3D bellows pockets with articulated knee darts",
+      "price": 145,
+      "type": "pants",
+      "isCustomizable": true,
+      "rating": 4.8,
+      "reviewsCount": 88,
+      "badge": "Modular",
+      "colors": [
+        {
+          "name": "Stealth Black",
+          "hex": "#12151b",
+          "isDark": true
+        },
+        {
+          "name": "Military Olive",
+          "hex": "#2b3427",
+          "isDark": true
+        },
+        {
+          "name": "Concrete Grey",
+          "hex": "#374151",
+          "isDark": true
+        },
+        {
+          "name": "Desert Sand",
+          "hex": "#c2b29d",
+          "isDark": false
+        },
+        {
+          "name": "Cyber Teal",
+          "hex": "#0d9488",
+          "isDark": true
+        }
+      ],
+      "fabrics": [
+        {
+          "id": "twill",
+          "name": "Heavyweight Stretch Twill",
+          "gsm": "340 GSM",
+          "roughness": 0.8,
+          "metalness": 0.05,
+          "bumpScale": 0.08,
+          "priceExtra": 0,
+          "desc": "High-tensile cotton twill with 3% spandex for mobility."
+        },
+        {
+          "id": "ripstop",
+          "name": "Cordura Military Ripstop",
+          "gsm": "380 GSM",
+          "roughness": 0.5,
+          "metalness": 0.15,
+          "bumpScale": 0.06,
+          "priceExtra": 30,
+          "desc": "Abrasion-resistant ballistic weave engineered for durability."
+        },
+        {
+          "id": "denim",
+          "name": "14oz Raw Japanese Selvedge",
+          "gsm": "420 GSM",
+          "roughness": 0.9,
+          "metalness": 0.03,
+          "bumpScale": 0.12,
+          "priceExtra": 45,
+          "desc": "Rigid shuttle-loomed denim that breaks in uniquely to wearer."
+        }
+      ],
+      "defaultConfig": {
+        "primaryColor": "#12151b",
+        "accentColor": "#00d9f5",
+        "cordsColor": "#00f5a0",
+        "fabricId": "twill",
+        "size": "32",
+        "decal": {
+          "id": "bauhaus-grid",
+          "position": "chest-left",
+          "scale": 0.45,
+          "rotation": 0,
+          "opacity": 0.85
+        }
+      },
+      "hotspots": [
+        {
+          "id": "bellows-pocket",
+          "label": "Dual Gusseted 3D Cargo Pocket",
+          "desc": "Expandable pleated volume pocket with hidden magnetic Fidlock flap clasp.",
+          "x": 0.65,
+          "y": -0.3,
+          "z": 0.38
+        },
+        {
+          "id": "knee-articulation",
+          "label": "Double-Dart Articulated Knees",
+          "desc": "Engineered anatomical darts allow natural bending without tugging on thighs.",
+          "x": 0.35,
+          "y": -0.95,
+          "z": 0.36
+        },
+        {
+          "id": "ankle-cinch",
+          "label": "Cord-Lock Hem Fasteners",
+          "desc": "Switch from relaxed straight leg to tapered high-top sneaker stack in seconds.",
+          "x": 0.4,
+          "y": -1.7,
+          "z": 0.1
+        }
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "description": "Engineered for maximum utility without sacrificing sharp street ergonomics. Cut with an articulated knee block, 8 technical pockets, and internal waistband tension straps.",
+      "details": [
+        "Custom milled 340 GSM stretch cotton twill",
+        "8-pocket technical configuration including concealed passport zip",
+        "Fidlock magnetic snap closures on main cargo flaps",
+        "Reinforced seat panel and bar-tacked stress intersections",
+        "Drawcord ankle cuffs with concealed bungee cinch locks"
+      ]
+    },
+    {
+      "id": "prod-cap-06",
+      "name": "Zenith Distressed 6-Panel Cap",
+      "category": "Headwear",
+      "tagline": "Enzyme washed canvas with 3D embroidery & brass hardware",
+      "price": 48,
+      "type": "cap",
+      "isCustomizable": true,
+      "rating": 4.7,
+      "reviewsCount": 156,
+      "badge": "Staff Pick",
+      "colors": [
+        {
+          "name": "Onyx Black",
+          "hex": "#121620",
+          "isDark": true
+        },
+        {
+          "name": "Solar Amber",
+          "hex": "#f59e0b",
+          "isDark": false
+        },
+        {
+          "name": "Faded Vintage Washed",
+          "hex": "#475569",
+          "isDark": true
+        },
+        {
+          "name": "Acid Cyan",
+          "hex": "#00d9f5",
+          "isDark": false
+        },
+        {
+          "name": "Ecru Canvas",
+          "hex": "#e5e0d4",
+          "isDark": false
+        },
+        {
+          "name": "Crimson Red",
+          "hex": "#dc2626",
+          "isDark": true
+        }
+      ],
+      "fabrics": [
+        {
+          "id": "canvas",
+          "name": "Enzyme-Washed Heavy Canvas",
+          "gsm": "380 GSM",
+          "roughness": 0.85,
+          "metalness": 0.05,
+          "bumpScale": 0.1,
+          "priceExtra": 0,
+          "desc": "Stonewashed cotton canvas with soft broken-in crown feel."
+        },
+        {
+          "id": "denim",
+          "name": "13oz Acid Washed Indigo",
+          "gsm": "400 GSM",
+          "roughness": 0.8,
+          "metalness": 0.03,
+          "bumpScale": 0.12,
+          "priceExtra": 12,
+          "desc": "Classic twill weave with highs and lows in indigo dye."
+        },
+        {
+          "id": "leather",
+          "name": "Suede Nubuck Finish",
+          "gsm": "420 GSM",
+          "roughness": 0.6,
+          "metalness": 0.15,
+          "bumpScale": 0.07,
+          "priceExtra": 25,
+          "desc": "Velvety buffed nubuck leather with rich tonal depth."
+        }
+      ],
+      "defaultConfig": {
+        "primaryColor": "#121620",
+        "accentColor": "#f59e0b",
+        "cordsColor": "#ffffff",
+        "fabricId": "canvas",
+        "size": "One Size",
+        "decal": {
+          "id": "distorted-skull",
+          "position": "front",
+          "scale": 0.6,
+          "rotation": 0,
+          "opacity": 0.95
+        }
+      },
+      "hotspots": [
+        {
+          "id": "curved-visor",
+          "label": "Memory Pre-Curved Visor",
+          "desc": "Formable polyethylene core retains exact custom curvature across years of use.",
+          "x": 0,
+          "y": 0.15,
+          "z": 0.95
+        },
+        {
+          "id": "brass-buckle",
+          "label": "Antiqued Brass Clasp",
+          "desc": "Embossed metal slide buckle with tuck-in canvas strap for clean profile.",
+          "x": 0,
+          "y": 0.3,
+          "z": -0.9
+        },
+        {
+          "id": "crown-patch",
+          "label": "3D Raised Graphic Zone",
+          "desc": "Rigid buckram backing provides a flat, clean surface for high-density custom logos.",
+          "x": 0,
+          "y": 0.65,
+          "z": 0.4
+        }
+      ],
+      "sizes": [
+        "One Size (Adjustable 54-62cm)"
+      ],
+      "description": "The quintessential 6-panel silhouette. Constructed from custom heavyweight washed canvas with reinforced buckram front panels, embroidered eyelets, and an antiqued brass closure.",
+      "details": [
+        "100% heavy stonewashed cotton canvas",
+        "Moisture-wicking internal sweatband with anti-odor treatment",
+        "Embossed metal strap clasp with hidden strap garage",
+        "6 embroidered ventilation eyelets for thermal regulation",
+        "Custom 3D patch / embroidery application ready"
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "id": "cyber-kanji",
+      "name": "Cyber Future (未来)",
+      "category": "Cyberpunk",
+      "svg": "<svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\">\n      <defs>\n        <linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n          <stop offset=\"0%\" stop-color=\"#00f5a0\" />\n          <stop offset=\"100%\" stop-color=\"#00d9f5\" />\n        </linearGradient>\n      </defs>\n      <rect x=\"20\" y=\"20\" width=\"260\" height=\"260\" rx=\"20\" fill=\"none\" stroke=\"url(#grad1)\" stroke-width=\"4\" stroke-dasharray=\"16 8\"/>\n      <text x=\"150\" y=\"140\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"76\" fill=\"url(#grad1)\" text-anchor=\"middle\" dominant-baseline=\"central\">未来</text>\n      <text x=\"150\" y=\"210\" font-family=\"monospace\" font-weight=\"700\" font-size=\"20\" fill=\"#ffffff\" letter-spacing=\"8\" text-anchor=\"middle\">CYBER//2088</text>\n      <circle cx=\"50\" cy=\"50\" r=\"6\" fill=\"#00f5a0\"/>\n      <circle cx=\"250\" cy=\"250\" r=\"6\" fill=\"#00d9f5\"/>\n    </svg>"
+    },
+    {
+      "id": "abstract-aura",
+      "name": "Chromatic Vortex",
+      "category": "Abstract",
+      "svg": "<svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\">\n      <defs>\n        <linearGradient id=\"auragrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">\n          <stop offset=\"0%\" stop-color=\"#ff007f\" />\n          <stop offset=\"50%\" stop-color=\"#7928ca\" />\n          <stop offset=\"100%\" stop-color=\"#00f5a0\" />\n        </linearGradient>\n      </defs>\n      <circle cx=\"150\" cy=\"150\" r=\"110\" fill=\"none\" stroke=\"url(#auragrad)\" stroke-width=\"8\"/>\n      <circle cx=\"150\" cy=\"150\" r=\"80\" fill=\"none\" stroke=\"url(#auragrad)\" stroke-width=\"4\" stroke-dasharray=\"6 6\"/>\n      <polygon points=\"150,50 180,130 260,150 180,170 150,250 120,170 40,150 120,130\" fill=\"url(#auragrad)\" opacity=\"0.8\"/>\n      <circle cx=\"150\" cy=\"150\" r=\"24\" fill=\"#ffffff\"/>\n    </svg>"
+    },
+    {
+      "id": "bauhaus-grid",
+      "name": "Atelier Typo 01",
+      "category": "Swiss / Brutalism",
+      "svg": "<svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\">\n      <rect x=\"30\" y=\"30\" width=\"240\" height=\"240\" fill=\"#0b0f17\" stroke=\"#ffffff\" stroke-width=\"4\"/>\n      <text x=\"50\" y=\"90\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"36\" fill=\"#ffffff\" letter-spacing=\"2\">ATELIER</text>\n      <text x=\"50\" y=\"130\" font-family=\"sans-serif\" font-weight=\"800\" font-size=\"28\" fill=\"#00d9f5\">STUDIO 3D</text>\n      <line x1=\"50\" y1=\"160\" x2=\"250\" y2=\"160\" stroke=\"#ff007f\" stroke-width=\"6\"/>\n      <text x=\"50\" y=\"200\" font-family=\"monospace\" font-size=\"14\" fill=\"#94a3b8\">LAT. 35.6762° N // LONG. 139.6503° E</text>\n      <text x=\"50\" y=\"235\" font-family=\"sans-serif\" font-weight=\"900\" font-size=\"18\" fill=\"#00f5a0\">[ EDITION N° 004 ]</text>\n    </svg>"
+    },
+    {
+      "id": "solar-vortex",
+      "name": "Solar Eclipse Nova",
+      "category": "Celestial",
+      "svg": "<svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\">\n      <defs>\n        <radialGradient id=\"solargrad\">\n          <stop offset=\"40%\" stop-color=\"#f59e0b\" />\n          <stop offset=\"90%\" stop-color=\"#ef4444\" />\n          <stop offset=\"100%\" stop-color=\"#7b2cbf\" />\n        </radialGradient>\n      </defs>\n      <circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"url(#solargrad)\"/>\n      <circle cx=\"130\" cy=\"130\" r=\"85\" fill=\"#0b0f17\"/>\n      <text x=\"150\" y=\"270\" font-family=\"monospace\" font-weight=\"700\" font-size=\"18\" fill=\"#f59e0b\" letter-spacing=\"4\" text-anchor=\"middle\">ECLIPSE//SOL</text>\n    </svg>"
+    },
+    {
+      "id": "distorted-skull",
+      "name": "Dystopian Chrome Skull",
+      "category": "Streetwear",
+      "svg": "<svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M70,120 C70,60 230,60 230,120 C230,165 210,185 200,210 L185,250 L115,250 L100,210 C90,185 70,165 70,120 Z\" fill=\"none\" stroke=\"#00f5a0\" stroke-width=\"8\"/>\n      <circle cx=\"115\" cy=\"130\" r=\"22\" fill=\"#00f5a0\"/>\n      <circle cx=\"185\" cy=\"130\" r=\"22\" fill=\"#00f5a0\"/>\n      <polygon points=\"150,165 140,195 160,195\" fill=\"#00f5a0\"/>\n      <line x1=\"130\" y1=\"230\" x2=\"130\" y2=\"250\" stroke=\"#00f5a0\" stroke-width=\"5\"/>\n      <line x1=\"150\" y1=\"230\" x2=\"150\" y2=\"250\" stroke=\"#00f5a0\" stroke-width=\"5\"/>\n      <line x1=\"170\" y1=\"230\" x2=\"170\" y2=\"250\" stroke=\"#00f5a0\" stroke-width=\"5\"/>\n    </svg>"
+    },
+    {
+      "id": "minimal-monogram",
+      "name": "Monogram Crest",
+      "category": "Luxury",
+      "svg": "<svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"150\" cy=\"150\" r=\"110\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"4\"/>\n      <circle cx=\"150\" cy=\"150\" r=\"102\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1\"/>\n      <text x=\"150\" y=\"165\" font-family=\"'Syne', serif\" font-weight=\"800\" font-size=\"95\" fill=\"#f59e0b\" text-anchor=\"middle\">TC</text>\n      <text x=\"150\" y=\"210\" font-family=\"monospace\" font-size=\"12\" fill=\"#ffffff\" letter-spacing=\"6\" text-anchor=\"middle\">EST. 2026</text>\n    </svg>"
+    }
+  ],
+  "savedDesigns": [
+    {
+      "id": "design-1794071334406",
+      "createdAt": "2026-11-07T17:08:54.406Z",
+      "name": "Cyber Neon Street Hoodie",
+      "productId": "prod-hoodie-01",
+      "productName": "Aetheric Cyber-Hoodie",
+      "primaryColor": "#00f5a0",
+      "accentColor": "#00d9f5",
+      "fabricId": "terry",
+      "size": "XL",
+      "price": 128
+    },
+    {
+      "id": "design-demo-1",
+      "name": "Cyber Kanji Acid Hoodie",
+      "productId": "prod-hoodie-01",
+      "productName": "Aetheric Cyber-Hoodie",
+      "primaryColor": "#0f131a",
+      "accentColor": "#00f5a0",
+      "cordsColor": "#ffffff",
+      "fabricId": "terry",
+      "fabricName": "Heavyweight French Terry",
+      "size": "L",
+      "decal": {
+        "id": "cyber-kanji",
+        "position": "front",
+        "scale": 0.65,
+        "rotation": 0,
+        "opacity": 0.95
+      },
+      "price": 128,
+      "createdAt": "2026-11-05T17:01:00.473Z",
+      "thumbnail": null
+    },
+    {
+      "id": "design-demo-2",
+      "name": "Electric Prism Windbreaker",
+      "productId": "prod-jacket-03",
+      "productName": "Neo-Tokyo Techwear Windbreaker",
+      "primaryColor": "#0a0d14",
+      "accentColor": "#00d9f5",
+      "cordsColor": "#00f5a0",
+      "fabricId": "ripstop",
+      "fabricName": "3-Layer DWR Hydrophobic Ripstop",
+      "size": "XL",
+      "decal": {
+        "id": "bauhaus-grid",
+        "position": "back",
+        "scale": 0.75,
+        "rotation": 0,
+        "opacity": 0.95
+      },
+      "price": 185,
+      "createdAt": "2026-11-06T17:01:00.473Z",
+      "thumbnail": null
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "TC-32736",
+      "createdAt": "2026-11-07T17:09:00.068Z",
+      "status": "In Production",
+      "timeline": [
+        {
+          "status": "Order Confirmed",
+          "time": "2026-11-07T17:09:00.068Z",
+          "done": true
+        },
+        {
+          "status": "Laser Fabric Cut",
+          "time": "2026-11-07T17:24:00.068Z",
+          "done": false
+        },
+        {
+          "status": "Custom 3D Print & Stitch",
+          "time": null,
+          "done": false
+        },
+        {
+          "status": "Quality Inspection",
+          "time": null,
+          "done": false
+        },
+        {
+          "status": "Dispatched with Courier",
+          "time": null,
+          "done": false
+        }
+      ],
+      "items": [
+        {
+          "productId": "prod-jacket-03",
+          "name": "Neo-Tokyo Techwear Windbreaker",
+          "size": "L",
+          "fabricName": "Ripstop",
+          "primaryColor": "#0c0f14",
+          "accentColor": "#00f5a0",
+          "price": 185,
+          "quantity": 1
+        }
+      ],
+      "customer": {
+        "fullName": "Elena Vance",
+        "email": "elena@city17.org",
+        "address": "14 Industrial Way",
+        "city": "Nova",
+        "postalCode": "10001",
+        "country": "United States"
+      },
+      "paymentMethod": "Credit Card",
+      "subtotal": 185,
+      "shipping": 0,
+      "discount": 0,
+      "total": 185
+    },
+    {
+      "orderId": "TC-94821",
+      "customer": {
+        "fullName": "Alex Rivera",
+        "email": "alex.rivera@example.com",
+        "address": "742 Evergreen Terrace",
+        "city": "San Francisco",
+        "state": "CA",
+        "postalCode": "94107",
+        "country": "United States"
+      },
+      "items": [
+        {
+          "id": "item-1",
+          "productId": "prod-hoodie-01",
+          "name": "Aetheric Cyber-Hoodie",
+          "type": "hoodie",
+          "primaryColor": "#0f131a",
+          "accentColor": "#00f5a0",
+          "fabricId": "terry",
+          "fabricName": "Heavyweight French Terry",
+          "size": "L",
+          "decal": {
+            "id": "cyber-kanji",
+            "position": "front"
+          },
+          "quantity": 1,
+          "price": 128
+        }
+      ],
+      "subtotal": 128,
+      "shipping": 0,
+      "discount": 0,
+      "total": 128,
+      "status": "In Production",
+      "timeline": [
+        {
+          "status": "Order Confirmed",
+          "time": "2026-11-06T21:01:00.473Z",
+          "done": true
+        },
+        {
+          "status": "Laser Fabric Cut",
+          "time": "2026-11-07T07:01:00.473Z",
+          "done": true
+        },
+        {
+          "status": "Custom 3D Print & Stitch",
+          "time": "2026-11-07T15:01:00.473Z",
+          "done": true
+        },
+        {
+          "status": "Quality Inspection",
+          "time": null,
+          "done": false
+        },
+        {
+          "status": "Dispatched with Courier",
+          "time": null,
+          "done": false
+        }
+      ],
+      "paymentMethod": "Credit Card (ending 4242)",
+      "createdAt": "2026-11-06T17:01:00.473Z"
+    }
+  ]
+}
